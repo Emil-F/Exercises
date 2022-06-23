@@ -1,6 +1,6 @@
 import random
 
-word_list = random.choice(["Monkey", "Sussy", "Pussy"]).lower()
+word_list = random.choice(["Monkey", "Ape", "Orangutan"]).lower()
 print(word_list)
 length = len(word_list)
 display = []
