@@ -34,12 +34,14 @@ while end_of_game == False:
   #Try running the program and entering a shift number of 45.
   #Add some code so that the program continues to work even if the user enters a shift number greater than 26. 
   #Hint: Think about how you can use the modulus (%).
-  if shift > 26:
-    end_of_game = False
-    print("Shift number exceeds the character limit. | Restarting.")
-  elif shift < 26:
-    caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
+  shift = shift % 26
+
+  # if shift > 26:
+  #   end_of_game = False
+  #   print("Shift number exceeds the character limit. | Restarting.")
+  # elif shift < 26:
+  caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
     
-    answer = input("Do you want to continue? 'yes' or 'no': ")
-    if answer == "no":
-      end_of_game = True
+  answer = input("Do you want to continue? 'yes' or 'no': ")
+  if answer == "no":
+    end_of_game = True
